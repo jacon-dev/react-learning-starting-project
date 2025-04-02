@@ -1,7 +1,6 @@
 import Header from './Header';
-import MainGoal from './MainGoal';
 import CoreConcepts from "./CoreConcepts";
-import componentsImage from '../assets/components.png';
+import {CORE_CONCEPTS} from "../data";
 
 function App() {
   return (
@@ -11,7 +10,7 @@ function App() {
           <section id="core-concepts">
               <h2>Core Concepts</h2>
               <ul>
-                <CoreConcepts title="Components" description="The core UI building block." image={componentsImage} />
+                <CoreConcepts title={CORE_CONCEPTS[0].title} description={CORE_CONCEPTS[0].description} image={CORE_CONCEPTS[0].image} />
               </ul>
           </section>
       </main>
