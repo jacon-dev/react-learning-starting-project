@@ -1,9 +1,8 @@
-import Header from './components/Header/Header';
-import CoreConcepts from "./components/CoreConcepts/CoreConcepts";
-import TabButton from "./components/TabButton/TabButton";
+import Header from './components/Header/Header.jsx';
+import CoreConcepts from "./components/CoreConcepts/CoreConcepts.jsx";
+import TabButton from "./components/TabButton/TabButton.jsx";
 import {useState} from 'react'
 
-import {CORE_CONCEPTS} from "./data";
 import {EXAMPLES} from "./data";
 
 function App() {
@@ -28,15 +27,10 @@ function App() {
     }
 
   return (
-    <div>
+    <>
         <Header />
       <main>
-          <section id="core-concepts">
-              <h2>Core Concepts</h2>
-              <ul>
-                  {CORE_CONCEPTS.map((conceptItem) => <CoreConcepts {...conceptItem} />)}
-              </ul>
-          </section>
+          <CoreConcepts />
           <section id="examples">
               <h2>Examples</h2>
               <menu>
@@ -48,7 +42,7 @@ function App() {
               {tabContent}
           </section>
       </main>
-    </div>
+    </>
   );
 }
 
